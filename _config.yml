@@ -1,2 +1,3 @@
 name: fengweiyao
 markdown: kramdown
+premarlink: /blog/:year/:month/:day/:title
