@@ -41,3 +41,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+pre {
+    padding: 1em 1.5em;
+}
