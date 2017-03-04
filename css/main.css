@@ -6,9 +6,10 @@ body {
 
 header.basic {
     overflow: hidden;
+    margin-bottom: 15px;
 }
 
-header h1 {
+header h1 { 
     margin: 0;
 }
 
@@ -78,4 +79,13 @@ main {
 
 pre {
     padding: 1em 1.5em;
+}
+
+pre code {
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+pre code span[class^="c"] {
+    font-size: 1em;
 }
