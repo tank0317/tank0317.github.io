@@ -29,8 +29,19 @@ p {
     color: #333;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    margin: 30px;
     font-size: .8em;
+}
+
+footer ul {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer ul li {
+    flex: 1 1 auto;
 }
 
 ul.posts { 

@@ -183,7 +183,7 @@ foo has been called
 
 ### Reference
 
-https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
-https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
-http://www.alloyteam.com/2016/05/javascript-timer/
-http://www.cnblogs.com/Uncle-Keith/p/6443115.html
+[https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)  
+[https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)   
+[http://www.alloyteam.com/2016/05/javascript-timer/](http://www.alloyteam.com/2016/05/javascript-timer/)     
+[http://www.cnblogs.com/Uncle-Keith/p/6443115.html](http://www.cnblogs.com/Uncle-Keith/p/6443115.html)   
