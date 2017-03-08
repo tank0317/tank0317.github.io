@@ -11,7 +11,7 @@ date: 2017-03-03
 我们这里谈论清除浮动的时，通常是指，子元素全部为float元素，而父级容器没有设置高度。此时，如果不清楚浮动，那么由于子元素为float元素，脱离了文档流，又因为，父级元素没有设置高度，因此父级元素会表现为，没有包含任何元素。结果就是，父元素的高度为0，无法显示。所以我们就要清除浮动。
 
 首先我们给定一个例子。如下
-```vbscript-html
+```html
 <div class="clearfix" style="border: 1px solid red">
     <div style="float:left; width:100px; height:100px; background-color:lightblue"></div>
     <div style="float:left; width:100px; height:100px; background-color:lightgray"></div>
@@ -49,7 +49,7 @@ date: 2017-03-03
 ## 方法三：结尾处添加空`<div>`标签使用`clear: both`
 
 针对我们前面给定的例子，使用方式如下
-```vbscript-html
+```html
 <div class="clearfix" style="border: 1px solid red">
     <div style="float:left; width:100px; height:100px; background-color:lightblue"></div>
     <div style="float:left; width:100px; height:100px; background-color:lightgray"></div>
