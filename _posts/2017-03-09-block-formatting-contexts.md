@@ -72,9 +72,11 @@ overflow: hidden;
 zoom: 1; 
 border: 5px solid teal; 
 } </pre></div>   
+
 如果想要在pink box和兄弟元素之间产生空隙（比如20px），那么可以：
-  * 给float元素设置20px的margin；
-  * 为BFC设置margin值大于float元素的宽度（比如`margin: 0 220px`）；
+* 给float元素设置20px的margin；
+* 为BFC设置margin值大于float元素的宽度（比如`margin: 0 220px`）；
+
 注意第二条，BFC需要设置`margin: 0 220px`才可以，原因就是，这里不能与float元素发生重叠的是BFC的border box而不是margin box。并且当上述例子中，两个float元素之间的宽度不足以放下BFC的border box时，那么BFC将会下移，重起一行放置，防止与float元素发生重叠。
 
 # Reference
