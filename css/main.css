@@ -39,7 +39,11 @@ nav ul li, footer ul li {
 
 a {
     text-decoration: none;
-    color: #999;
+    color: #4183c4;
+}
+
+header a {
+    color: #999;;
 }
 
 a:hover {
@@ -88,9 +92,22 @@ main {
     border-radius: 10px;
 }
 
+pre, code {
+    color: #000;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.94em;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    border: 1px solid #CCC;
+}
+
 pre {
     padding: 1em 1.5em;
     overflow-x: auto;
+}
+
+code {
+    padding: 0 3px;
 }
 
 pre code {
