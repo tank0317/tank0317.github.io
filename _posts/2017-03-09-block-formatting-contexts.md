@@ -10,6 +10,7 @@ date: 2017-03-09
 我们先来看看，什么情况下会触发BFC（Block Formatting Context）。
 根据[CSS2.1标准](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)，以下情况下会触发BFC。
 
+<br>
 * float
 * absolutely positioned elements
 * inline-blocks, table-cells, and table-captions
@@ -17,7 +18,8 @@ date: 2017-03-09
 * elements styled with "display:flex" or "inline-flex" (flex boxes) （CSS3中添加）
 
 ***
-*Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.*         
+*Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.*   
+
 ***
 
 这里需要注意，`display: table`并不会创建BFC，实际上当我们使用`display: table`的时候会创建一些匿名box（相关内容看[这里](https://www.w3.org/TR/CSS21/tables.html#anonymous-boxes)）这些匿名box中有`display: table-cell`的匿名box，创建了BFC。也就是说创建BFC的不是`display: table`，而是其中的匿名box。   
@@ -49,7 +51,8 @@ date: 2017-03-09
 根据[CSS标准](https://www.w3.org/TR/CSS21/visuren.html#bfc-next-to-float)BFC的border-box不会与浮动元素的margin-box发生重叠。
 
 ***
- *The border box of a table, a block-level replaced element, or an element in the normal flow that establishes a new block formatting context (such as an element with 'overflow' other than 'visible') must not overlap the margin box of any floats in the same block formatting context as the element itself.*           
+ *The border box of a table, a block-level replaced element, or an element in the normal flow that establishes a new block formatting context (such as an element with 'overflow' other than 'visible') must not overlap the margin box of any floats in the same block formatting context as the element itself.*    
+
  ***   
 
  比如：   
