@@ -47,7 +47,7 @@ date: 2017-03-09
  **Note**：只有处于同一个BFC时，clear才会起作用。    
  
 ### **BFC不会与浮动元素发生重叠**
-<br>
+
 根据[CSS标准](https://www.w3.org/TR/CSS21/visuren.html#bfc-next-to-float)BFC的border-box不会与浮动元素的margin-box发生重叠。
 
 ***
