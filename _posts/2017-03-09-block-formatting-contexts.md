@@ -10,7 +10,6 @@ date: 2017-03-09
 我们先来看看，什么情况下会触发BFC（Block Formatting Context）。
 根据[CSS2.1标准](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)，以下情况下会触发BFC。
 
-<br>
 * float
 * absolutely positioned elements
 * inline-blocks, table-cells, and table-captions

@@ -42,8 +42,8 @@ a {
     color: #4183c4;
 }
 
-header a {
-    color: #999;;
+header a, footer a {
+    color: #999;
 }
 
 a:hover {
@@ -113,6 +113,7 @@ code {
 pre code {
     font-size: 1.2em;
     line-height: 1.4em;
+    border: 0;
 }
 
 pre code span[class^="c"] {
