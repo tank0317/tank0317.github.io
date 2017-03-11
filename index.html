@@ -3,28 +3,27 @@ layout: default
 title: Tank0317, 一个微不足道的蚂蚁
 ---
 
-<main>
+
+<article>
+	<header>
+		<h2>Hello, 欢迎来到我的博客</h1>
+	</header>
+	<p></p>
+</article>
+
+<div class="recent-blogs">
+	<header>
+	<h2>Recent blogs</h2>
+	</header>
+	{% for post in site.posts %}
 	<article>
 		<header>
-			<h1>Hello, 欢迎来到我的博客</h1>
+			<h3>
+				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+			</h3>
+			<p>{{ post.date | %Y-%m-%d }}</p>  
 		</header>
-		<p></p>
+		<p>{{ post.excerpt | strip_html }}</p>
 	</article>
-
-	<div>
-		<header>
-		<h2>Recent blogs</h2>
-		</header>
-		{% for post in site.posts %}
-		<article>
-			<header>
-				<h3>
-					<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-				</h3>
-				<p>{{ post.date | %Y-%m-%d }}</p>  
-			</header>
-			<p>{{ post.excerpt } strip_html }</p>
-		</article>
-		{% endfor %}
-	</div>
-</main>
+	{% endfor %}
+</div>
