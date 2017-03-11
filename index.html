@@ -15,13 +15,13 @@ title: Tank0317, 一个微不足道的蚂蚁
 	<header>
 	<h2>Recent blogs</h2>
 	</header>
-	{% for post in site.posts %}
+	{% for post in site.posts limit: 5 %}
 	<article>
 		<header>
 			<h3>
 				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 			</h3>
-			<p>{{ post.date | %Y-%m-%d }}</p>  
+			<p>{{ post.date | date: %Y-%m-%d }}</p>  
 		</header>
 		<p>{{ post.excerpt | strip_html }}</p>
 	</article>

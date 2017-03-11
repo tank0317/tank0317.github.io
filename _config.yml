@@ -1,8 +1,10 @@
 name: fengweiyao
 
+baseurl: https://tank0317.github.io
+
 #Conversion
 markdown: kramdown
 
-premarlink: /blog/:year/:month/:day/:title
+premalink: /blog/:year/:month/:day/:title
 
 excerpt_separator: <!--more-->
