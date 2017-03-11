@@ -16,6 +16,8 @@ date: 2017-03-09
 * block boxes with 'overflow' other than 'visible'
 * elements styled with "display:flex" or "inline-flex" (flex boxes) （CSS3中添加）
 
+<!--more-->
+
 ***
 *Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.*   
 

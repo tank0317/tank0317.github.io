@@ -7,6 +7,8 @@ date: 2017-03-09
 
 this是JavaScript中的一个关键字。通常情况下，this值主要和function如何调用有关。另外this无法在运行过程中赋值，并且可能随着使用场合的不同，this值会发生变化。ES5中引进了bind()方法来为function绑定this值而不需要考虑它是如何调用的。ES6中引入了arrow function，它的this则由所在上下文中的this值决定(具体可参考[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。   
 
+<!--more-->
+
 ## Global Context（全局作用域）   
 
 在全局作用域下，this值指向global object。无论是否在严格模式。

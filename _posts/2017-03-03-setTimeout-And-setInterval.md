@@ -7,8 +7,11 @@ date: 2017-03-03
 
 Javascript中关于定时器，常用的有**setTimeout**和**setInterval**。比较新的还有一个setImmediate， 但大多数浏览器并不支持，所以这里不做研究。
 
+<!--more-->
+
 ### setTimeout
 **setTimeout(fn, x)**通常接收两个参数：要执行的代码和以毫秒表示的时间（即在执行代码前需要等待多少毫秒）。其中第一个参数也可以是一个包含Javascript代码的字符串（就和eval( )函数中使用的字符串一样），也可以是一个函数。例如下面对setTimeout( )的两次调用都会在一秒钟后显示一个警告框。
+
 ```javascript
 //不建议使用字符串
 setTimeout("alert('Hello world!')", 1000);

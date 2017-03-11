@@ -11,16 +11,20 @@ title: Tank0317, 一个微不足道的蚂蚁
 		<p></p>
 	</article>
 
-<h2>Recent blogs</h2>
-{% for post in site.posts %}
-<article>
-	<header>
-		<h3>
-			{{ post.title }}
-		</h3>
-		
-	</header>
-</article>
-	<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-{% endfor %}
+	<div>
+		<header>
+		<h2>Recent blogs</h2>
+		</header>
+		{% for post in site.posts %}
+		<article>
+			<header>
+				<h3>
+					<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				</h3>
+				<p>{{ post.date | %Y-%m-%d }}</p>  
+			</header>
+			<p>{{ post.excerpt } strip_html }</p>
+		</article>
+		{% endfor %}
+	</div>
 </main>

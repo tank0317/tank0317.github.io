@@ -4,3 +4,5 @@ name: fengweiyao
 markdown: kramdown
 
 premarlink: /blog/:year/:month/:day/:title
+
+excerpt_separator: <!--more-->
