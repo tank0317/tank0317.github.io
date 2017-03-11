@@ -3,6 +3,24 @@ layout: default
 title: Tank0317, 一个微不足道的蚂蚁
 ---
 
-<div class="blurb">
-	<h1>Hello, 欢迎来到我的博客</h1>
-</div><!-- /.blurb -->	
+<main>
+	<article>
+		<header>
+			<h1>Hello, 欢迎来到我的博客</h1>
+		</header>
+		<p></p>
+	</article>
+
+<h2>Recent blogs</h2>
+{% for post in site.posts %}
+<article>
+	<header>
+		<h3>
+			{{ post.title }}
+		</h3>
+		
+	</header>
+</article>
+	<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+{% endfor %}
+</main>

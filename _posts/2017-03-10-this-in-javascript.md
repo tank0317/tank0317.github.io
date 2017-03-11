@@ -71,7 +71,7 @@ add.apply(o, [10, 20]); // 1+3+10+20
 
 ```javascript
 function bar() {
-	return Object.prototype.toString.call(this);
+    return Object.prototype.toString.call(this);
 }
 
 bar.call(7); // [object Number]
@@ -123,9 +123,9 @@ console.log(foo() === globalObject); //true
 
 ```javascript
 var obj = {
-		bar : function () {
+	bar : function () {
     var x = ( () => this );
-			return x;
+		return x;
     }
 }
 // bar作为obj的方法调用，这时内部箭头函数的this值被设置为obj
@@ -144,10 +144,10 @@ console.log(fn2()() === window); //true
 
 ```javascript
 var o = {
-	prop : 37,
+    prop : 37,
     f : function () {
-    	return this.prop;
-        }
+	   return this.prop;
+    }
 }
 
 console.log(o.f()); // logs 37
@@ -198,7 +198,7 @@ function sum () {
 }
  
 var o = {
-	a: 1,
+    a: 1,
     b: 2,
     c: 3,
     get average() {
