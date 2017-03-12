@@ -1,7 +1,7 @@
 body {
     margin: 30px auto;
     width: 65%;
-    background-color: #fff;
+    background-color: #efefef;
 }
 
 header.basic {
@@ -103,7 +103,7 @@ main {
 .post_title {
     margin: 7px auto;
 }
-.post_tags .post_date {
+.post_tags, .post_date {
     margin: 0 auto;
 }
 
