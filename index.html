@@ -21,8 +21,8 @@ title: Tank0317, 一个微不足道的蚂蚁
 			<h3>
 				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 			</h3>
-			<p>{% for tag in post.tags %} <span class="tags">{{ tag[0] }}</span> {% endfor %}</p>
-			<p><small>{{ post.date | date: %Y-%m-%d }}</small></p>  
+			<p>{% for tag in page.tags %} <span class="tags">{{ tag[0] }}</span> {% endfor %}</p>
+			<p><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>  
 		</header>
 		<p class="post_excerpt">{{ post.excerpt | strip_html }}</p>
 	</article>
