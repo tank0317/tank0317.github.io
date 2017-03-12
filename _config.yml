@@ -5,6 +5,6 @@ baseurl: https://tank0317.github.io
 #Conversion
 markdown: kramdown
 
-premalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 
 excerpt_separator: <!--more-->

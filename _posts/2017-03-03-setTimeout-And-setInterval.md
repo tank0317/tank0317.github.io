@@ -4,7 +4,6 @@ title: 深入理解setTimeout 和 setInterval
 date: 2017-03-03
 tags: javascript, front-end
 ---
-@(前端学习笔记)[JavaScript]
 
 Javascript中关于定时器，常用的有**setTimeout**和**setInterval**。比较新的还有一个setImmediate， 但大多数浏览器并不支持，所以这里不做研究。
 

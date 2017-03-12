@@ -5,8 +5,6 @@ date: 2017-03-09
 tags: css, front-end
 ---
 
-@(前端学习笔记)[学习笔记]
-
 ## 触发BFC
 我们先来看看，什么情况下会触发BFC（Block Formatting Context）。
 根据[CSS2.1标准](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)，以下情况下会触发BFC。
