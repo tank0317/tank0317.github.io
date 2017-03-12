@@ -2,6 +2,7 @@
 layout: post
 title: 深入理解setTimeout 和 setInterval
 date: 2017-03-03
+tags: javascript, front-end
 ---
 @(前端学习笔记)[JavaScript]
 
