@@ -1,7 +1,7 @@
 body {
     margin: 30px auto;
     width: 65%;
-    background-color: #eee;
+    background-color: #fff;
 }
 
 header.basic {
@@ -91,6 +91,32 @@ main {
     padding: 25px;
     border-radius: 10px;
 }
+
+.post_category {
+    color: #efa45e;
+}
+
+.recent_blog {
+    margin-bottom: 45px;
+}
+
+.post_title {
+    margin: 7px auto;
+}
+.post_tags .post_date {
+    margin: 0 auto;
+}
+
+.post_tags .tag {
+    font-size: .5em;
+    //border: 1px solid black;
+    padding: 2px 3px;
+    background-color: #5d5c5c;
+    color: white;
+    border-radius: 2px;
+}
+
+
 
 pre, code {
     color: #000;
