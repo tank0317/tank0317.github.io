@@ -10,4 +10,12 @@ layout: default
 	<div class="post">
 		{{ content }}
 	</div>
+
+	<!-- 添加评论部分 -->
+	{% if page.comments %}
+	<div class="post_comments">
+		{% include disqus.html %}
+	</div>
+	{% endif %}
+	<!-- 添加评论部分 -->
 </article>
