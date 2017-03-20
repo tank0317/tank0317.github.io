@@ -1,37 +1,18 @@
 <!DOCTYPE html>
 	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<!-- link to code highlight -->
-			<link rel="stylesheet" type="text/css" href="/css/syntax.css"> 
-			<!-- 添加google analytics -->
-			{% include analytics.html %}
-		</head>
+		{% include head.html %}
 		<body>
-			<header class="basic">
-				<h1><a href="{{ site.baseurl }}" title="">Tank0317</a></h1>
-				<nav>
-		    		<ul>
-		        		<li><a href="/">Home</a></li>
-			        	<li><a href="/about">About</a></li>
-		        		<li><a href="/cv">CV</a></li>
-		        		<li><a href="/blog">Blog</a></li>
-		    		</ul>
-				</nav>
-			</header>
+			{% include header.html %}
+
 			<main class="container">
 			
 			{{ content }}
 			
 			</main><!-- /.container -->
-			<footer>
-	    		<ul>
-	    			<li> © 2017 tank0317 </li>
-	        		<li><a href="mailto:fengweiyao0317@hotmail.com">email</a></li>
-	        		<li><a href="https://github.com/tank0317">github.com/tank0317</a></li>
-				</ul>
-			</footer>
+
+			{% include footer.html %}
 		</body>
+
+		{% include scripts.html %}
+
 	</html>
