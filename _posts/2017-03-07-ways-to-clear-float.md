@@ -3,6 +3,7 @@ layout: post
 title: 清除浮动的常用方式和优缺点
 date: 2017-03-03
 tags: css, front-end
+comments: true
 ---
 
 首先我们要搞清楚一件事情，就是为什么要清除浮动？
