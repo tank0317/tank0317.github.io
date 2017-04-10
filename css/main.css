@@ -166,6 +166,6 @@ figure img{
 }
 
 /* 居中图片介绍 */
-figure caption{
+figure figcaption{
     text-align: center;
 }

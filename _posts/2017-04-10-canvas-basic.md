@@ -62,7 +62,11 @@ if (canvas.getContext) {
 
 画图的所有操作都是基于坐标来实现的，而canvas中默认的坐标原点是在画布中的左上角，如下图所示
 
-![canvas坐标](http://om0jxp12h.bkt.clouddn.com/Canvas_default_grid.png)
+<figure>
+  ![canvas坐标](http://om0jxp12h.bkt.clouddn.com/Canvas_default_grid.png)
+  <figcaption>Fig.1 - canvas坐标</figcaption>
+</figure>
+
 
 然后我们可以通过以下的canvas API进行简单的作图：
 
@@ -85,6 +89,8 @@ clearRect(x, y, width, height) //清除矩形
 2. 使用[绘图命令](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths)绘制路径
 3. 使用`closePath()`关闭路径（可选）
 4. 使用`stroke()`或`fill()`命令渲染图形。
+
+#### 常用绘图命令
 
 其中常用的绘图命令包括：
 ```javascript
@@ -113,14 +119,46 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
 
 <figure>
   <img src="http://om0jxp12h.bkt.clouddn.com/circle1.jpg" alt="arc命令的使用">
-  <figcaption>Fig.1 - arc命令的使用</figcaption>
+  <figcaption>Fig.2 - arc命令的使用</figcaption>
 </figure>
 
-<br>
+atcTo一般的使用方式如下：
 
+```javascript
+ctx.moveTo(x0, y0);
+
+ctx.arcTo(x1, y1, x2, y2, radius);
+```
 <figure>
   <img src="http://om0jxp12h.bkt.clouddn.com/arcTo.jpg" alt="arcTo命令的使用">
-  <figcaption>arcTo命令的使用</figcaption>
+  <figcaption>Fig.3 - arcTo命令的使用</figcaption>
 </figure>
 
+#### 渲染路径（render path）
 
+
+#### 关闭路径 
+
+我们使用closePath()关闭路劲。那关闭路径（closing path）是什么意思呢？我们先看一个例子：
+
+```javascript
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+// Path made of three points (defines two lines)
+ctx.moveTo(20,20);
+ctx.lineTo(100, 100);
+ctx.lineTo(100,0);
+// Close the path, try commenting this line
+ctx.closePath();
+// indicate stroke color + draw first part of the path
+ctx.strokeStyle = "blue";
+ctx.stroke();
+```
+
+代码中我们只画了两条线，然后我们是否使用`colsePath()`会造成下图所示的区别：
+<figure>
+![有无closePath的区别](http://om0jxp12h.bkt.clouddn.com/closePath.jpg)
+<figcaption>Fig.4 - 有无closePath的区别</figcaption>
+</figure>
+
+上图中当我们使用`closePath()`的时候，这个时候调用`stroke()`会把路径（path）的终点和起始点连接起来。
