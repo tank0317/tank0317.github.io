@@ -6,7 +6,7 @@ tags: canvas, front-end
 comments: true;
 ---
 
-# canvas 基础
+# canvas 基础（一）
 
 canvas>是HTML5中添加的HTML元素。有了canvas元素我们可以通过javascript实现绘制图形，比如说画图，照片的组合以及实现一些简单甚至复杂的动画效果。
 
@@ -63,7 +63,7 @@ if (canvas.getContext) {
 画图的所有操作都是基于坐标来实现的，而canvas中默认的坐标原点是在画布中的左上角，如下图所示
 
 <figure>
-  ![canvas坐标](http://om0jxp12h.bkt.clouddn.com/Canvas_default_grid.png)
+<img src="http://om0jxp12h.bkt.clouddn.com/Canvas_default_grid.png" alt="canvas坐标">
   <figcaption>Fig.1 - canvas坐标</figcaption>
 </figure>
 
@@ -79,16 +79,50 @@ clearRect(x, y, width, height) //清除矩形
 
 当我们使用fillRect()和strokeRect()画矩形的时候（或者draw text 以及 draw image），这些图形都是在**immediate mode**下画的。就如字面的意思，我们调用这两个函数，他们会马上画出一个矩形。
 
-然而还有一种模式是**path mode**或者**buffered mode**，我们下面会介绍。这种模式在我们画直线、画曲线、画弧线以及画矩形的时候更加高效。不过，矩形是唯一一种既有函数能够在immediate mode实现画图，也有函数能够在buffer mode下画图的图形。
+然而还有一种模式是**path mode**或者**buffered mode**，我们下面会介绍。这种模式在我们画直线、画曲线、画弧线以及画矩形的时候更加高效。不过，矩形是唯一一种既有函数能够在immediate mode实现画图，也有函数能够在**buffer mode**下画图的图形。
 
 ### Drawing Path
 
-在这里path（路径）可以是一系列的不同宽度、不同颜色的直线、曲线或者其他图形。通常使用路径去画图形会包含以下步骤：
+在这里path（路径）可以是一系列的不同宽度、不同颜色的直线、曲线或者其他图形。路径的绘制是在**path mode/buffered mode**下工作的。通常使用路径去画图形会包含以下步骤：
 
 1. 使用`beginPath()`命令创建路径
 2. 使用[绘图命令](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths)绘制路径
 3. 使用`closePath()`关闭路径（可选）
 4. 使用`stroke()`或`fill()`命令渲染图形。
+
+#### 渲染路径（render path）
+
+渲染路径有两种方式，绘制路径轮廓和填充路径区域。分别对应`stroke()`或者`fill()`两个命令。
+
+在**buffered mode**下任何的绘图命令都不会立即在屏幕上绘制出图形，而是暂存在内存里，当我们调用`stroke()`或者`fill()`命令的时候才会将所有之前添加的在内存里的路径一次性绘制到屏幕上。另外，需要注意的是，执行`stroke()`或者`fill`命令，内存中的路径并不会清空，如果想要清空之前的路径，需要调用`beginPath()`命令。
+
+这里我们给出一个例子来说明`beginPath()`、`stroke()`以及`fill`的正确使用方式：
+
+<figure>
+<img src="http://om0jxp12h.bkt.clouddn.com/twicedrawnpathcorrectnew_copie.jpg" alt="beginPath()示例图片">
+<figcaption>Fig.2 - beginPath()示例图片</figcaption>
+</figure>
+
+```javascript
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+// first part of the path
+ctx.moveTo(20,20);
+ctx.lineTo(100, 100);
+ctx.lineTo(100,0);
+// indicate stroke color + draw first part of the path
+ctx.strokeStyle = "#0000FF";
+ctx.stroke();
+// start a new path, empty the current buffer
+ctx.beginPath();
+// second part of the path
+ctx.moveTo(120,20);
+ctx.lineTo(200, 100);
+ctx.lineTo(200,0);
+// indicate stroke color + draw the path
+ctx.fillStyle = "pink";
+ctx.fill();
+```
 
 #### 常用绘图命令
 
@@ -119,7 +153,7 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
 
 <figure>
   <img src="http://om0jxp12h.bkt.clouddn.com/circle1.jpg" alt="arc命令的使用">
-  <figcaption>Fig.2 - arc命令的使用</figcaption>
+  <figcaption>Fig.3 - arc命令的使用</figcaption>
 </figure>
 
 atcTo一般的使用方式如下：
@@ -131,11 +165,8 @@ ctx.arcTo(x1, y1, x2, y2, radius);
 ```
 <figure>
   <img src="http://om0jxp12h.bkt.clouddn.com/arcTo.jpg" alt="arcTo命令的使用">
-  <figcaption>Fig.3 - arcTo命令的使用</figcaption>
+  <figcaption>Fig.4 - arcTo命令的使用</figcaption>
 </figure>
-
-#### 渲染路径（render path）
-
 
 #### 关闭路径 
 
@@ -157,8 +188,8 @@ ctx.stroke();
 
 代码中我们只画了两条线，然后我们是否使用`colsePath()`会造成下图所示的区别：
 <figure>
-![有无closePath的区别](http://om0jxp12h.bkt.clouddn.com/closePath.jpg)
-<figcaption>Fig.4 - 有无closePath的区别</figcaption>
+<img src="http://om0jxp12h.bkt.clouddn.com/closePath.jpg" alt="有无closePath的区别">
+<figcaption>Fig.5 - 有无closePath的区别</figcaption>
 </figure>
 
-上图中当我们使用`closePath()`的时候，这个时候调用`stroke()`会把路径（path）的终点和起始点连接起来。
+上图中当我们使用`closePath()`的时候，这个时候调用`stroke()`会把路径（path）的终点和起始点连接起来，形成一个封闭的路径轮廓，如果不调用的时候，终点和起始点是不会自动连接在一起的。但是如果最后调用的是`fill()`命令，那么即使没有调用`closePath()`也会绘制出路径填充图如之前的Fig.3所示。
