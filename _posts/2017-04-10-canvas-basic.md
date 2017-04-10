@@ -110,11 +110,17 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
 另外还有[绘制cubic Bézier曲线](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo)以及[绘制quadratic Bézier曲线](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo)的命令，由于使用起来有些复杂，我们这里不做介绍，有兴趣的可以深入学习。
 
 这里放两张图片辅助理解`arc(x, y, radius, startAngle, endAngle, anticlockwise)`命令以及`arcTo(x1, y1, x2, y2, radius)`的使用。
+
 <figure>
-  <img src="http://om0jxp12h.bkt.clouddn.com/circle1.jpg"  style="width: 400px; margin: auto" alt="arc命令的使用">
-  <figcaption style="text-align: center;">Fig.1 - arc命令的使用</figcaption>
+  <img src="http://om0jxp12h.bkt.clouddn.com/circle1.jpg" alt="arc命令的使用">
+  <figcaption>Fig.1 - arc命令的使用</figcaption>
 </figure>
+
 <br>
-![arcTo命令的使用](http://om0jxp12h.bkt.clouddn.com/arcTo.jpg)
+
+<figure>
+  <img src="http://om0jxp12h.bkt.clouddn.com/arcTo.jpg" alt="arcTo命令的使用">
+  <figcaption>arcTo命令的使用</figcaption>
+</figure>
 
 

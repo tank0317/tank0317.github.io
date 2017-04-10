@@ -2,6 +2,7 @@ body {
     margin: 30px auto;
     width: 65%;
     background-color: #efefef;
+    overflow: auto;
 }
 
 header.basic {
@@ -155,4 +156,16 @@ blockquote {
 
 blockquote p {
     margin: 0;
+}
+
+/* 居中图片 */
+figure img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 居中图片介绍 */
+figure caption{
+    text-align: center;
 }
