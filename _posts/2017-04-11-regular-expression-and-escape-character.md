@@ -6,7 +6,7 @@ tags: canvas, front-end
 comments: true;
 ---
 
-##问题来源
+## 问题来源
 
 在javascript中我们新建一个正则表达式是这样的：
 
@@ -34,6 +34,8 @@ var re = new RegExp('\\w+\\s', 'g');
 
 所以现在的问题是，为什么使用字符串创建正则表达式会经常“\\\\”？这时候我们就要说一说**‘\’**以及**转义字符（Escape Character）**了。
 > *Notice that, in C++, character and string literals also escape characters using the backslash character (\), and this affects the syntax for constructing regular expressions*
+
+待续，编辑中。。。。
 
 ## Reference 
 
