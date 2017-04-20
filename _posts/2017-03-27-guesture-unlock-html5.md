@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用canvas实现网页版手势解锁
-date: 2017-03-03
+date: 2017-03-27
 tags: javascript, html5, front-end
 comments: true
 ---
