@@ -1,3 +1,10 @@
+---
+layout: post
+title: vim学习笔记（一）：配置文件vimrc
+date: 2017-05-05
+tags: vim
+comments: true
+---
 
 要让vim按照我们的习惯设置启动，我们可以把这些设置写到一个叫vimrc的文件中。当vim启动的时候会执行这个文件中的命令。
 
