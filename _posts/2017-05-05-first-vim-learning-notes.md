@@ -1,6 +1,6 @@
 ---
 layout: post
-title: vim学习笔记（一）\：配置文件vimrc
+title: vim学习笔记（一）：配置文件vimrc
 date: 2017-05-05
 tags: vim
 comments: true
