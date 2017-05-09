@@ -1,4 +1,4 @@
-----
+---
 layout: post
 title: vim学习笔记（三）：多窗口编辑
 date: 2017-05-08
