@@ -88,13 +88,13 @@ comments: true
 现在我们可以水平的分割窗口，也可以垂直的分割窗口，而且可以重复的做上述的操作，因此我们可以创建任意布局的水平垂直分布的窗口。此时，我们需要一些命令让我们能够在窗口之间任意跳转。这些命令有：
 
 ```
-	CTRL-W h	move to the window on the left
-	CTRL-W j	move to the window below
-	CTRL-W k	move to the window above
-	CTRL-W l	move to the window on the right
+CTRL-W h	move to the window on the left
+CTRL-W j	move to the window below
+CTRL-W k	move to the window above
+CTRL-W l	move to the window on the right
 
-	CTRL-W t	move to the TOP window
-	CTRL-W b	move to the BOTTOM window
+CTRL-W t	move to the TOP window
+CTRL-W b	move to the BOTTOM window
 ```
 ## 移动窗口
 
@@ -121,7 +121,7 @@ comments: true
 
 假如你现在想把最后一个窗口移动到最上方。那么可以将光标移动到这个窗口，然后使用命令（注意下面是大写的K）:
 
-```vim
+```
 CRTL+W K
 ```
 
@@ -159,22 +159,22 @@ CRTL+W K
 
 同样，不只是可以将窗口移动到上方，类似的还有：
 
-```vim
-	CTRL-W H	move window to the far left
-	CTRL-W J	move window to the bottom
-	CTRL-W L	move window to the far right
+```
+CTRL-W H	move window to the far left
+CTRL-W J	move window to the bottom
+CTRL-W L	move window to the far right
 ```
 
 ## 针对所有窗口的命令
 
 当我们打开了很多个窗口，然后想要退出的时候，我们可以对每个窗口使用`:close`命令。但是，当窗口很多的时候，这种方式效率太低 了。我们还可以使用更高效的命令如：
 
-```vim
+```
 :qall quit all windows
 ```
 但是，如果有窗口没有保存更改的话，vim是不允许我们就这样随意退出的。所以我们就有了如下命令：
 
-```vim
+```
 :wall     write all windows
 :wqall    write and quit all windows
 :qall!    quit all windows discard all changes
@@ -208,8 +208,8 @@ CRTL+W K
 在标签页之间跳转的命令有：
 
 ```vim
-gt 				 Go to the next Tab page
-{count}gt	     Go to tab page {count}.  The first tab page has number one.
+gt               Go to the next Tab page
+{count}gt        Go to tab page {count}.  The first tab page has number one.
 gT               Go to the previous Tab page
 :tabn[next]      Go to the next Tab page
 :tabp[revious]   Go to the previous Tab page
