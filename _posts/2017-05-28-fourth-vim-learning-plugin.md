@@ -89,7 +89,12 @@ python install.py --tern-completer
 * change Vim's working directory (:cd /path/to/new/project) and restart the ycmd server (:YcmRestartServer)
 * change Vim's working directory (:cd /path/to/new/project), open a JavaScript file (or set filetype to JavaScript) and restart the Tern server using YCM completer subcommand :YcmCompleter RestartServer.
 
-最后来一张效果图：
+最后来一张效果图，其中左边是.tern-project文件，我只添加了jquery库的补全：
+
+<figure>
+<img src="http://om0jxp12h.bkt.clouddn.com/showcompletion.PNG" alt="补全效果图">
+  <figcaption>Fig.4 - 补全效果图</figcaption>
+</figure>
 
 
 
