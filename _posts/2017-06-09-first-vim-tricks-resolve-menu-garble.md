@@ -2,7 +2,7 @@
 layout: post
 title: vim小技巧（一）：解决gvim菜单栏乱码以及隐藏菜单栏
 date: 2017-06-09
-tags: vim, vim-plugin
+tags: vim
 comments: true
 ---
 
