@@ -1,64 +1,60 @@
 ---
 layout: post
-title: vimĞ¡¼¼ÇÉ£¨Ò»£©£º½â¾ögvim²Ëµ¥À¸ÂÒÂëÒÔ¼°Òş²Ø²Ëµ¥À¸
+title: vimå°æŠ€å·§ï¼ˆä¸€ï¼‰ï¼šè§£å†³gvimèœå•æ ä¹±ç ä»¥åŠéšè—èœå•æ 
 date: 2017-06-09
 tags: vim
 comments: true
 ---
 
-¸ÃÎÄÕÂ¼òµ¥½éÉÜÈçºÎÅäÖÃgvim£¬±ÜÃâ²Ëµ¥ÂÒÂëµÄÏÖÏó·¢Éú¡£Í¬Ê±£¬Èç¹û²»Ï²»¶²Ëµ¥À¸¡¢¹¤¾ßÀ¸¡¢¹ö¶¯ÌõµÈ£¬ÈçºÎÉèÖÃÒş²Ø¡£ÕâĞ©ÔÚvimÖĞ¶¼ÊÇ¿ÉÒÔÁé»îÅäÖÃµÄ¡£
+è¯¥æ–‡ç« ç®€å•ä»‹ç»å¦‚ä½•é…ç½®gvimï¼Œé¿å…èœå•ä¹±ç çš„ç°è±¡å‘ç”Ÿã€‚åŒæ—¶ï¼Œå¦‚æœä¸å–œæ¬¢èœå•æ ã€å·¥å…·æ ã€æ»šåŠ¨æ¡ç­‰ï¼Œå¦‚ä½•è®¾ç½®éšè—ã€‚è¿™äº›åœ¨vimä¸­éƒ½æ˜¯å¯ä»¥çµæ´»é…ç½®çš„ã€‚
 
-## ²Ëµ¥ÂÒÂë
+## èœå•ä¹±ç 
 
-ÒªËµ²Ëµ¥ÂÒÂë£¬ÄÇÒ»¶¨ÊÇgvim£¬ÒòÎªvim±¾ÉíÊÇÃ»ÓĞ²Ëµ¥µÄ¡£ÁíÍâÂÒÂë¿Ï¶¨ÊÇ±àÂë·½Ê½µÄÎÊÌâ£¬ËùÒÔÎÒÃÇĞèÒª×öµÄÖ»ÊÇĞŞ¸Ä±àÂë·½Ê½¡£
+è¦è¯´èœå•ä¹±ç ï¼Œé‚£ä¸€å®šæ˜¯gvimï¼Œå› ä¸ºvimæœ¬èº«æ˜¯æ²¡æœ‰èœå•çš„ã€‚å¦å¤–ä¹±ç è‚¯å®šæ˜¯ç¼–ç æ–¹å¼çš„é—®é¢˜ï¼Œæ‰€ä»¥æˆ‘ä»¬éœ€è¦åšçš„åªæ˜¯ä¿®æ”¹ç¼–ç æ–¹å¼ã€‚
 
-ÏÈÉÏ½á¹û
+å…ˆä¸Šç»“æœ
 ```
-"------------GvimÖĞÎÄ²Ëµ¥ÂÒÂë½â¾ö·½°¸-------------
-" ÉèÖÃÎÄ¼ş±àÂë¸ñÊ½
+"------------Gvimä¸­æ–‡èœå•ä¹±ç è§£å†³æ–¹æ¡ˆ-------------
+" è®¾ç½®æ–‡ä»¶ç¼–ç æ ¼å¼
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1,gbk,gb18030,gk2312
-if has("win32")
- set fileencoding=chinese
-else
- set fileencoding=utf-8
-endif
+set fileencoding=utf-8
 
-"½â¾ö²Ëµ¥ÂÒÂë É¾³ı²Ëµ¥£¬ÔÙÖØĞÂÌí¼Ó²Ëµ¥£¬vim»á°´ÕÕÖ®Ç°Éè¶¨µÄ±àÂë¸ñÊ½´´½¨²Ëµ¥À¸
+"è§£å†³èœå•ä¹±ç  åˆ é™¤èœå•ï¼Œå†é‡æ–°æ·»åŠ èœå•ï¼Œvimä¼šæŒ‰ç…§ä¹‹å‰è®¾å®šçš„ç¼–ç æ ¼å¼åˆ›å»ºèœå•æ 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
-"½â¾öconsleÌáÊ¾ĞÅÏ¢Êä³öÂÒÂë
+"è§£å†³consleæç¤ºä¿¡æ¯è¾“å‡ºä¹±ç 
 language messages zh_CN.utf-8
 
-"--------ÒÔÉÏÊÇGvimÖĞÎÄ²Ëµ¥ÂÒÂë½â¾ö·½°¸------------
+"--------ä»¥ä¸Šæ˜¯Gvimä¸­æ–‡èœå•ä¹±ç è§£å†³æ–¹æ¡ˆ------------
 ```
 
-ÒÔÉÏ¸´ÖÆ×Ô[ÕâÆª²©¿Í](http://blog.csdn.net/gatieme/article/details/55047156)
+ä»¥ä¸Šå¤åˆ¶è‡ª[è¿™ç¯‡åšå®¢](http://blog.csdn.net/gatieme/article/details/55047156)
 
-ÏÖÔÚÎÒÃÇ´óÖÂ½âÊÍÏÂÉÏÃæµÄ¼¸¸öoptionµÄº¬Òå
+ç°åœ¨æˆ‘ä»¬å¤§è‡´è§£é‡Šä¸‹ä¸Šé¢çš„å‡ ä¸ªoptionçš„å«ä¹‰
 
-| option | º¬Òå|
+| option | å«ä¹‰|
 |:---:|:---:|
 |encoding | Sets the character encoding used inside Vim.  It applies to text in the buffers, registers, Strings in expressions, text stored in the viminfo file|
 | fileencoding | Sets the character encoding for the file of this buffer. |
 | fileencodings | This is a list of character encodings considered when starting to edit an existing file.  When a file is read, Vim tries to use the first mentioned character encoding.  If an error is detected, the next one in the list is tried.  When an encoding is found that works, 'fileencoding' is set to it.  If all fail, 'fileencoding' is set to an empty string, which means the value of 'encoding' is used.|
 
-ÏÂ´ÎÔÙÀ´·­Òë°É¡£¡£¡£
+ä¸‹æ¬¡å†æ¥ç¿»è¯‘å§ã€‚ã€‚ã€‚
 
-## Òş²Ø²Ëµ¥À¸
+## éšè—èœå•æ 
 
-È»ºó£¬»¹ÓĞÒ»¸öÎÊÌâÊÇ£¬Èç¹ûÎÒ²»Ï²»¶gVimµÄ²Ëµ¥À¸£¬¹¤¾ßÀ¸£¬¸ÃÈçºÎÒş²ØÄØ£¿
+ç„¶åï¼Œè¿˜æœ‰ä¸€ä¸ªé—®é¢˜æ˜¯ï¼Œå¦‚æœæˆ‘ä¸å–œæ¬¢gVimçš„èœå•æ ï¼Œå·¥å…·æ ï¼Œè¯¥å¦‚ä½•éšè—å‘¢ï¼Ÿ
 
 ```
-"ÉèÖÃgvimÒş²Ø²Ëµ¥À¸£¬¹¤¾ßÀ¸£¬¹ö¶¯Ìõ
+"è®¾ç½®gviméšè—èœå•æ ï¼Œå·¥å…·æ ï¼Œæ»šåŠ¨æ¡
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 ```
 
-ÆäËûÓĞ¹ØÉèÖÃ¿ÉÒÔ²Î¿¼`:h guioptions`¡£
+å…¶ä»–æœ‰å…³è®¾ç½®å¯ä»¥å‚è€ƒ`:h guioptions`ã€‚
 
 ## Reference
 
