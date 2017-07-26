@@ -117,6 +117,10 @@ main {
     border-radius: 2px;
 }
 
+.post_tags a {
+	color: white;
+}
+
 
 
 pre, code {
