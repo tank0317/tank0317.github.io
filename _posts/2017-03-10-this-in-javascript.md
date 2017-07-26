@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript中的this值
 date: 2017-03-10
-tags: javascript, front-end
+tags: javascript front-end
 comments: true
 ---
 本片文章主要翻译自[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)。   

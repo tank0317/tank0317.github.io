@@ -2,7 +2,7 @@
 layout: post
 title: 一个有关闭包的问题
 date: 2017-03-17
-tags: javascript, front-end
+tags: javascript front-end
 comments: true
 ---    
 

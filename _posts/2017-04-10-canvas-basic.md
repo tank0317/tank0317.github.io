@@ -2,7 +2,7 @@
 layout: post
 title: canvas基础（一）
 date: 2017-04-10
-tags: canvas, front-end
+tags: canvas front-end
 comments: true;
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: C++/java的正则表达式里为什么那么多“\\\\”？
 date: 2017-04-11
-tags: c++, javascript, regular-expression
+tags: c++ javascript regular-expression
 comments: true;
 ---
 

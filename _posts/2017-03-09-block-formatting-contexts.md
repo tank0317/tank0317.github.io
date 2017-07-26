@@ -2,7 +2,7 @@
 layout: post
 title: 关于BFC（Block Formatting Context）的那些东西
 date: 2017-03-09
-tags: css, front-end
+tags: css front-end
 comments: true
 ---
 
