@@ -17,7 +17,7 @@
 
 	  //处理点击tag
 	  function showTag(tagStr) {
-		$.getJSON("../post.json",
+		$.getJSON("/post.json",
 		function(data) {
 		  $('#show-tag').empty(content);
 		  var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
