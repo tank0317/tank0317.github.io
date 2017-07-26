@@ -28,7 +28,7 @@
 		jq.each(item.tags,
 		function(j, tag) {
 		  if (tag == tagStr) {
-			content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+			content += "<li><span>" + item.date + "</span> » <a href=\"" + item.url + "\">" + item.title + "</a></li>";
 			count++;
 		  }
 
