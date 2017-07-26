@@ -2,34 +2,36 @@
 <script id="dsq-count-scr" src="//tank0317-github-io.disqus.com/count.js" async></script> 
 <!-- disqus 显示评论数 js代码 end-->
 
-<script src="../js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript">
   var jq = jQuery.noConflict();
-  function showTag(tagStr) {
-    jq.getJSON("../post.json",
-    function(data) {
-      jq('#show-tag').empty(content);
-      var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
-      var count = 0;
-      jq.each(data,
-      function(i, item) {
-        jq.each(item.tags,
-        function(j, tag) {
-          if (tag == tagStr) {
-            content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
-            count++;
-          }
+  jq(document).ready(function(){
+	  function showTag(tagStr) {
+		jq.getJSON("../post.json",
+		function(data) {
+		  jq('#show-tag').empty(content);
+		  var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
+		  var count = 0;
+		  jq.each(data,
+		  function(i, item) {
+			jq.each(item.tags,
+			function(j, tag) {
+			  if (tag == tagStr) {
+				content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+				count++;
+			  }
 
-        });
-      });
-      if (count > 0) {
-        content += "</ul>";
-        postNumStr = "<span>（" + count + "篇文章）</span>";
-        jq('#show-tag').append(content);
-        jq('#show-tag>h2').append(postNumStr);
-      }
-    });
-  }
+			});
+		  });
+		  if (count > 0) {
+			content += "</ul>";
+			postNumStr = "<span>（" + count + "篇文章）</span>";
+			jq('#show-tag').append(content);
+			jq('#show-tag>h2').append(postNumStr);
+		  }
+		});
+	  }
+  });
 </script>
 
 
