@@ -4,45 +4,42 @@
 
 <script src="/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() {
-	  //通过url传递tag参数
-	  var href = window.location.href;
-	  var pos = href.indexOf('?tag=');
-	  var paraStr = href.substring(pos + 5);
-	  if (pos > 0) {
-	    showTag(decodeURI(paraStr));
-	  } else {
-	    showTag("");
-	  }
+  //通过url传递tag参数
+  var href = window.location.href;
+  var pos = href.indexOf('?tag=');
+  var paraStr = href.substring(pos + 5);
+  if (pos > 0) {
+    showTag(decodeURI(paraStr));
+  } else {
+    showTag("");
+  }
 
-	  //处理点击tag
-	  function showTag(tagStr) {
-		$.getJSON("/post.json",
-		function(data) {
-		  $('#show-tag').empty(content);
-		  var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
-		  var count = 0;
-		  $.each(data,
-		  function(i, item) {
-			$.each(item.tags,
-			function(j, tag) {
-			  if (tag == tagStr) {
-				content += "<li><span>" + item.date + "</span> » <a href=\"" + item.url + "\">" + item.title + "</a></li>";
-				count++;
-			  }
-
-			});
-		  });
-		  if (count > 0) {
-			content += "</ul>";
-			postNumStr = "<span>（" + count + "篇文章）</span>";
-			$('#show-tag').append(content);
-			$('#show-tag>h2').append(postNumStr);
+  //处理点击tag
+  function showTag(tagStr) {
+	$.getJSON("/post.json",
+	function(data) {
+	  $('#show-tag').empty(content);
+	  var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
+	  var count = 0;
+	  $.each(data,
+	  function(i, item) {
+		$.each(item.tags,
+		function(j, tag) {
+		  if (tag == tagStr) {
+			content += "<li><span>" + item.date + "</span> » <a href=\"" + item.url + "\">" + item.title + "</a></li>";
+			count++;
 		  }
+
 		});
+	  });
+	  if (count > 0) {
+		content += "</ul>";
+		postNumStr = "<span>（" + count + "篇文章）</span>";
+		$('#show-tag').append(content);
+		$('#show-tag>h2').append(postNumStr);
 	  }
-  });
-  
+	});
+  }
 </script>
 
 
