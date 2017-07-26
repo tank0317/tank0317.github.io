@@ -2,10 +2,9 @@
 <script id="dsq-count-scr" src="//tank0317-github-io.disqus.com/count.js" async></script> 
 <!-- disqus 显示评论数 js代码 end-->
 
-<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript">
-  document.ready(function() {
-  	  var jq = jQuery.noConflict();
+  $(document).ready(function() {
 
 	  //通过url传递tag参数
 	  var href = window.location.href;
@@ -19,14 +18,14 @@
 
 	  //处理点击tag
 	  function showTag(tagStr) {
-		jq.getJSON("../post.json",
+		$.getJSON("../post.json",
 		function(data) {
-		  jq('#show-tag').empty(content);
+		  $('#show-tag').empty(content);
 		  var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
 		  var count = 0;
-		  jq.each(data,
+		  $.each(data,
 		  function(i, item) {
-			jq.each(item.tags,
+			$.each(item.tags,
 			function(j, tag) {
 			  if (tag == tagStr) {
 				content += "<li><span>" + item.date + "</span> » <a href=\"" + item.url + "\">" + item.title + "</a></li>";
@@ -38,8 +37,8 @@
 		  if (count > 0) {
 			content += "</ul>";
 			postNumStr = "<span>（" + count + "篇文章）</span>";
-			jq('#show-tag').append(content);
-			jq('#show-tag>h2').append(postNumStr);
+			$('#show-tag').append(content);
+			$('#show-tag>h2').append(postNumStr);
 		  }
 		});
 	  }
