@@ -1,6 +1,7 @@
 body {
     margin: 30px auto;
     width: 65%;
+    min-width: 550px;
     background-color: #efefef;
     overflow: auto;
 }
