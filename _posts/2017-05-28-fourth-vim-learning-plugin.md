@@ -2,7 +2,7 @@
 layout: post
 title: vim学习笔记（四）：插件
 date: 2017-05-28
-tags: vim, vim-plugin
+tags: vim vim-plugin
 comments: true
 ---
 
