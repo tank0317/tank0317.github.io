@@ -24,13 +24,18 @@ comments: true;
 更形象的描述可以看下面的图片：
 
 <figure>
-<img src="http://om0jxp12h.bkt.clouddn.com/scrollHeightVSoffsetHeight.png" alt="clientHeight和scrollHeight">
-  <figcaption>Fig.1 - clientHeight和scrollHeight</figcaption>
+<img src="http://om0jxp12h.bkt.clouddn.com/scrollHeightVSoffsetHeight.png" alt="clientHeight和offsetHeight">
+  <figcaption>Fig.1 - clientHeight和offsetHeight</figcaption>
+</figure>
+
+<figure>
+<img src="http://om0jxp12h.bkt.clouddn.com/scrollHeight.png" alt="scrollHeight">
+  <figcaption>Fig.2 - scrollHeight</figcaption>
 </figure>
 
 <figure>
 <img src="http://om0jxp12h.bkt.clouddn.com/scrollTop.png" alt="scrollTop">
-  <figcaption>Fig.2 - scrollTop</figcaption>
+  <figcaption>Fig.3 - scrollTop</figcaption>
 </figure>
 
 ### 判断元素是否滚动到底
@@ -57,15 +62,19 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 <figure>
 <img src="http://om0jxp12h.bkt.clouddn.com/HeightandTop.gif" alt="所有表征元素宽高位置的属性集合">
-  <figcaption>Fig.3 - 全家福</figcaption>
+  <figcaption>Fig.4 - 全家福</figcaption>
 </figure>
 
 ### Reference
 
 <http://www.imooc.com/article/7945>
+
 <https://stackoverflow.com/questions/22675126/what-is-offsetheight-clientheight-scrollheight>
+
 <https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollTop>
+
 <https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollHeight>
+
 <https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight>
 
 
