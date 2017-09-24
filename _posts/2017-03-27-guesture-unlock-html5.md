@@ -26,7 +26,7 @@ comments: true
 
 以上的部分主要是参考了<http://www.alloyteam.com/2015/07/html5-shi-xian-ping-mu-shou-shi-jie-suo/>的实现思路。在此之上，优化了部分代码，同时添加了部分代码实现了PC端的支持，此时无论使用PC还是mobile都能看到正确的效果。
 
-[H5手势解锁最终效果](http://output.jsbin.com/wifimuj)
+[H5手势解锁最终效果](https://tank0317.github.io/H5lock)
 
 [Github源码](https://github.com/tank0317/H5lock)
 
