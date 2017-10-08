@@ -31,8 +31,8 @@ new Promise((resolve, reject) => {
 
 //得到一个rejected状态的promise
 new Promise((resolve, reject) => {
-	throw new Error("oh, error!");
-	resolve(); //有效的操作
+	throw new Error("oh, error!"); //有效的操作
+	resolve(); 
 	reject();
 });
 ```
