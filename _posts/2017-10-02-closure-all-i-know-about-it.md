@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 闭包————我所知道的一切//
+title: 闭包——我所知道的一切
 date: 2017-10-02
 tags: javascript
 comments: true
