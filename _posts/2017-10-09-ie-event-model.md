@@ -41,7 +41,7 @@ function eventHandler(e) {
 
 因此如果想要兼容两种事件模型，应该如下处理：
 
-```javascritp
+```javascript
 function eventHandler(e) {
     if (!e) e = window.event;  // 兼容IE获取事件对象
 
